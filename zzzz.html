@@ -5,7 +5,7 @@
 	<button type="button" id="maple">maple set</button><br><br>
 	<button type="button" id="start">start</button>
 	<button type="button" id="stop" disabled>stop</button>
-	<button type="button" id="snapshot">shot</button>
+	<button type="button" id="snapshot" disabled>hi</button>
 	<br><br>
 </div>
 <span>
@@ -56,10 +56,9 @@ async function startCapture() {
     videoElement.srcObject = captureStream;
     startButton.disabled = true;
     stopButton.disabled = false;
-	snapshotButton.disabled = false;
 	takeSnapshot;
 	
-	yee = setInterval(takeSnapshot, 700);
+	yee = setInterval(takeSnapshot, 1000);
 	
     }else{
 	
@@ -76,7 +75,6 @@ function stopCapture() {
   videoElement.srcObject = null;
   startButton.disabled = false;
   stopButton.disabled = true;
-  snapshotButton.disabled = false;
   
   clearInterval(shot);
   clearInterval(yee);
