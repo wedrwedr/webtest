@@ -36,7 +36,6 @@
         const videoElement = document.querySelector('#video');
 		const startButton = document.querySelector('#start');
 		const stopButton = document.querySelector('#stop');
-		const autoButton = document.querySelector('#auto');
 		const snapshotButton = document.querySelector('#snapshot');
 		const mapleButton = document.querySelector('#maple');
 let count = 0;
@@ -77,8 +76,8 @@ function stopCapture() {
   videoElement.srcObject = null;
   startButton.disabled = false;
   stopButton.disabled = true;
-  autoButton.disabled = true;
   snapshotButton.disabled = false;
+  
   clearInterval(shot);
   clearInterval(yee);
 }
