@@ -113,7 +113,7 @@ async function takeSnapshot() {
   drawCanvas(canvas, image, x1, y1, w, h);
   drawCanvas(canvasq, image, x2, y2, w, h);
   await clearInterval(shot);
-  shot = setInterval(() => check(canvas,canvasq), 800);
+  check(canvas,canvasq);
 }
 function drawCanvas(canvas, img,a,b,w,h) {
   canvas.width = getComputedStyle(canvas).width.split('px')[0];
