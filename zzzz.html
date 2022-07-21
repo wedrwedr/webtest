@@ -1,11 +1,10 @@
 <title>틀그찾</title>
-<br>메이플 창을 잡는다면 maple set 버튼을 누른 후 창을 메이플로 잡으시면 됩니다.<br>메이플 목적이 아닌 경우 Print Screen키를 눌러 그림판에서 좌표 확인 후 입력하시면 됩니다.<br><br>
+<br>메이플 창을 잡는다면 1366x768 버튼을 누른 후 창을 메이플로 잡으시면 됩니다.<br>메이플 목적이 아닌 경우 Print Screen키를 눌러 그림판에서 좌표 확인 후 입력하시면 됩니다.<br><br>
 
 <div>
-	<button type="button" id="maple">maple set</button><br><br>
+	<button type="button" id="maple">1366x768</button><br><br>
 	<button type="button" id="start">start</button>
 	<button type="button" id="stop" disabled>stop</button>
-	<button type="button" id="snapshot" disabled>hi</button>
 	<br><br>
 </div>
 <span>
@@ -36,7 +35,6 @@
         const videoElement = document.querySelector('#video');
 		const startButton = document.querySelector('#start');
 		const stopButton = document.querySelector('#stop');
-		const snapshotButton = document.querySelector('#snapshot');
 		const mapleButton = document.querySelector('#maple');
 let count = 0;
 let shot;
@@ -62,7 +60,7 @@ async function startCapture() {
 	
     }else{
 	
-	alert('다 입력 ㄱㄱ요');
+	alert('다 입력 ㄱㄱ');
 	
     }
   } catch (err) {
@@ -144,7 +142,6 @@ function check(canvasp,canvasq){
 }
 startButton.addEventListener('click', startCapture);
 stopButton.addEventListener('click', stopCapture);
-snapshotButton.addEventListener('click', takeSnapshot);
 mapleButton.addEventListener('click', mapleset);
     </script>
 
