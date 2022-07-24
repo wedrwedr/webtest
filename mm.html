@@ -5,6 +5,7 @@
 	<button type="button" id="maple">1366x768</button><br><br>
 	<button type="button" id="start">start</button>
 	<button type="button" id="stop" disabled>stop</button>
+	<input type='number' id="spd" style="width:120px;" placeholder="속도 (1000=1초)" value="1000"></input>
 	<br><br>
 </div>
 <span>
@@ -46,7 +47,8 @@ async function startCapture() {
   let y2 = document.querySelector('#y2').value;
   let w = document.querySelector('#w').value;
   let h = document.querySelector('#h').value;
-    if(x1!="" && y1!="" && x2!="" && y2!="" && w!="" && h!=""){
+  let spd = document.querySelector('#spd').value;
+    if(x1!="" && y1!="" && x2!="" && y2!="" && w!="" && h!="" && spd!=""){
     const displayMediaOptions = { audio: false, video: { cursor: 'always' } };
     const captureStream = await navigator.mediaDevices.getDisplayMedia(
       displayMediaOptions,
@@ -56,7 +58,7 @@ async function startCapture() {
     stopButton.disabled = false;
 	takeSnapshot;
 	
-	yee = setInterval(takeSnapshot, 1000);
+	yee = setInterval(takeSnapshot, spd);
 	
     }else{
 	
